@@ -1,0 +1,40 @@
+{
+  "name": "socketio-transport",
+  "description": "socketio-transport will allow you to define request handlers on the server side and to access them from the client side.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cosmosio/socketio-transport",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/cosmosio/socketio-transport/master/LICENSE"
+    }
+  ],
+  "files": [
+    "LICENSE",
+    "index.js"
+  ],
+  "author": "Olivier Scherrer <pode.fr@gmail.com>",
+  "keywords": [
+    "transport",
+    "request",
+    "handlers",
+    "listen",
+    "disposable"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cosmosio/socketio-transport.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cosmosio/socketio-transport/issues"
+  },
+  "scripts": {
+    "test": "jasmine-node test/"
+  },
+  "main": "index.js",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+  }
+}
