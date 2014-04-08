@@ -17,6 +17,7 @@ var Transport = require("socketio-transport"),
   transport = new Transport();
 ```
 
+documentation is coming...
 
 LICENSE
 =======
