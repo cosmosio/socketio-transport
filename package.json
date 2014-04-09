@@ -19,7 +19,10 @@
     "request",
     "handlers",
     "listen",
-    "disposable"
+    "socket.io",
+    "socketio",
+    "server",
+    "client"
   ],
   "repository": {
     "type": "git",
