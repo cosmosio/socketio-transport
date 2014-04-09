@@ -22,7 +22,7 @@ beforeEach(function () {
 describe("SocketIOTransportTest", function () {
 
     it("should be a constructor function", function () {
-        expect(SocketIOTransport).toBeInstanceOf(Function);
+        expect(typeof SocketIOTransport).toBe("function");
     });
 
 });
@@ -82,7 +82,6 @@ describe("SocketIOTransportTestRequests", function () {
         func = function () {},
         returnValue = {};
 
-        expect(socketIOTransport.once).toBeInstanceOf(Function);
         socket.once.andReturn(returnValue);
 
         expect(socketIOTransport.once(event, func)).toBe(returnValue);
@@ -127,8 +126,6 @@ describe("SocketIOTransportTestRequests", function () {
 
         spyOn(socketIOTransport, "once").andCallThrough();
 
-        expect(socketIOTransport.request).toBeInstanceOf(Function);
-
         expect(socketIOTransport.request()).toBe(false);
         expect(socketIOTransport.request("channel")).toBe(false);
         expect(socketIOTransport.request("channel", "data")).toBe(true);
@@ -137,8 +134,6 @@ describe("SocketIOTransportTestRequests", function () {
 
         eventId = socket.once.mostRecentCall.args[0];
         expect(eventId).toBeTruthy();
-
-        expect(socket.once.mostRecentCall.args[1]).toBeInstanceOf(Function);
 
         expect(socket.emit.wasCalled).toBe(true);
         expect(socket.emit.mostRecentCall.args[0]).toBe("channel");
@@ -154,7 +149,6 @@ describe("SocketIOTransportTestRequests", function () {
         expect(socketIOTransport.request("channel", "data", callback)).toBe(true);
 
         func = socket.once.mostRecentCall.args[1];
-        expect(func).toBeInstanceOf(Function);
 
         func(args);
 
@@ -180,8 +174,6 @@ describe("SocketIOTransportTestRequests", function () {
 
         spyOn(socketIOTransport, "on").andCallThrough();
 
-        expect(socketIOTransport.listen).toBeInstanceOf(Function);
-
         expect(socketIOTransport.listen()).toBe(false);
         expect(socketIOTransport.listen("channel")).toBe(false);
         expect(socketIOTransport.listen("channel", "data")).toBe(false);
@@ -193,7 +185,6 @@ describe("SocketIOTransportTestRequests", function () {
         expect(eventId).toBeTruthy();
 
         func = socket.on.mostRecentCall.args[1];
-        expect(func).toBeInstanceOf(Function);
         func();
 
         expect(socket.emit.wasCalled).toBe(true);
