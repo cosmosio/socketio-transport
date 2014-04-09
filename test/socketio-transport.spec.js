@@ -5,7 +5,7 @@
 *
 * Copyright (c) 2014 Olivier Scherrer <pode.fr@gmail.com>
 */
-var SocketIOTransport = require("../index"),
+var SocketIOTransport = require("../index").Client,
     Observable = require("watch-notify");
 
 var socket = null;
