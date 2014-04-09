@@ -36,8 +36,8 @@
   },
   "main": "index.js",
   "devDependencies": {
-
+    "watch-notify": "0.0.2",
+    "jasmine-node": "~1.14.3"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
